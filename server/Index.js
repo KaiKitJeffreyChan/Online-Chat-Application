@@ -11,9 +11,15 @@ const router = require("./router");
 //initialize express
 const app = express();
 const server = http.createServer(app);
+
 // instance of socketio
 const io = socketio(server);
-
+io.on("connection", (socket) => {
+  console.log("we have connection");
+  socket.on("disconnect", () => {
+    console.log("user has left");
+  });
+});
 //passing middleware router component
 app.use(router);
 
