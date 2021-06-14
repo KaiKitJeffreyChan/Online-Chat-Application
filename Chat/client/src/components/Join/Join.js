@@ -19,7 +19,6 @@ const Join = () => {
           />
         </div>
         <div>
-          {/* have margin top 20 VVVV*/}
           <input
             placeholder="Room"
             className="joinInput mt-20"
@@ -33,7 +32,6 @@ const Join = () => {
           onClick={(e) => (!name || !room ? e.preventDefault() : null)}
           to={`/chat?name=${name}&room=${room}`}
         >
-          {/* have margin top 20 VVVV*/}
           <button className="button mt-20" type="submit">
             Sign In
           </button>
