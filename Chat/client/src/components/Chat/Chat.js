@@ -14,6 +14,7 @@ const Chat = ({ location }) => {
   const [room, setRoom] = useState("");
   const [message, setMessage] = useState([]);
   const [messages, setMessages] = useState([]);
+  // const [isTyping, setIsTyping] = useState (false);
   const ENDPOINT = "localhost:5000";
 
   //Handle joining a room
@@ -60,6 +61,8 @@ const Chat = ({ location }) => {
       socket.emit("sendMessage", message, () => setMessage(""));
     }
   };
+
+  const getUsers = (e) => {};
 
   return (
     <div className="outerContainer">
